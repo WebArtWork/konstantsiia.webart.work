@@ -32,6 +32,8 @@
     .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px}.map-card{min-height:430px;border-radius:20px;overflow:hidden}.map-card iframe{width:100%;height:100%;min-height:430px;border:0;display:block}.contact-card{border-radius:20px;background:var(--cream);padding:42px}.contact-card .big{display:block;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:850;color:var(--teal);margin:30px 0}.contact-card dl{border-top:1px solid var(--line);padding-top:20px}.contact-card dt{font-size:.75rem;color:#777}.contact-card dd{margin:2px 0 16px;font-weight:700}
     .final{min-height:650px;position:relative;display:grid;place-items:center;text-align:center;color:white;background:url('images/chan.jpg') center/cover}.final:after{content:"";position:absolute;inset:0;background:rgba(10,25,26,.68)}.final>div{position:relative;z-index:1;padding:70px 20px}.final h2{font:normal clamp(3.6rem,8vw,8rem)/.84 var(--serif);letter-spacing:-.055em;max-width:950px;margin:.2em auto}.final p{font-size:1.15rem}.final .actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:28px}.final .btn:not(.copper){border-color:white}.final small{display:block;margin-top:25px;letter-spacing:.15em;color:#c1cfcb}
     footer{background:#152322;color:#dde2dd;padding:65px 0 95px}.footer-grid{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:35px}.footer-brand strong{font:normal 1.6rem var(--serif);letter-spacing:.1em}.footer-brand small{display:block;color:#8fa19b}.footer-col b{display:block;color:white;margin-bottom:10px}.footer-col a{display:block;color:#aab7b2;margin:6px 0}.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:23px;color:#82938d;font-size:.78rem;display:flex;justify-content:space-between}.mobile-sticky{display:none}
+    .request{background:var(--cream)}.request.alt{background:var(--ivory)}.request-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:65px;align-items:start}.request-phone{display:inline-block;margin-top:20px;font-size:clamp(1.5rem,3vw,2.3rem);font-weight:850;color:var(--teal)}.request-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 14px;padding:34px;border-radius:20px;background:white;border:1px solid var(--line);box-shadow:0 20px 60px rgba(11,86,87,.08)}.field{display:grid;gap:7px;align-content:start;min-width:0;font-size:.7rem;font-weight:850;letter-spacing:.14em;text-transform:uppercase;color:#4f5049}.field.full{grid-column:1/-1}.field small{font-weight:500;letter-spacing:0;text-transform:none;color:#6f6f67}.field input,.field select,.field textarea{width:100%;max-width:100%;min-width:0;min-height:50px;padding:11px 16px;border:1px solid rgba(37,38,34,.22);border-radius:14px;background:var(--cream);color:var(--ink);font-size:1rem;font-weight:400;letter-spacing:0;text-transform:none}.field textarea{min-height:110px;resize:vertical}.field [aria-invalid=true]{border-color:#a8321f;box-shadow:0 0 0 1px #a8321f}[data-error-for]{font-weight:600;letter-spacing:0;text-transform:none;color:#a8321f}[data-error-for]:empty{display:none}.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}.request-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px}.request-foot .btn{min-height:50px;padding:0 1.5rem;font-weight:700}.request-foot .btn[disabled]{opacity:.6;cursor:wait;transform:none}.request-note{flex:1;min-width:200px;margin:0;font-size:.8rem;color:#6f6f67}[data-status]{grid-column:1/-1;margin:0;padding:14px 18px;border-left:4px solid var(--teal);border-radius:12px;background:#e3efec;font-size:.95rem}[data-status]:empty{display:none}[data-status][data-state=error]{border-color:#a8321f;background:#f8e6df}[data-status] a{font-weight:850;text-decoration:underline}
+    @media(max-width:980px){.request-grid{grid-template-columns:minmax(0,1fr);gap:34px}}@media(max-width:600px){.request-form{grid-template-columns:minmax(0,1fr);padding:22px 16px}}
     .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,.8,.3,1),transform .9s cubic-bezier(.16,.8,.3,1)}.reveal.visible{opacity:1;transform:none}.reveal-item{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.16,.8,.3,1),transform .8s cubic-bezier(.16,.8,.3,1)}.reveal-group.visible .reveal-item{opacity:1;transform:none}.reveal-group.visible .reveal-item:nth-child(1){transition-delay:0s}.reveal-group.visible .reveal-item:nth-child(2){transition-delay:.09s}.reveal-group.visible .reveal-item:nth-child(3){transition-delay:.18s}.reveal-group.visible .reveal-item:nth-child(4){transition-delay:.27s}.reveal-group.visible .reveal-item:nth-child(5){transition-delay:.36s}.reveal-group.visible .reveal-item:nth-child(6){transition-delay:.45s}.reveal-group.visible .reveal-item:nth-child(7){transition-delay:.54s}.reveal-group.visible .reveal-item:nth-child(8){transition-delay:.63s}
     @supports(background-attachment:fixed){@media(min-width:1001px) and (prefers-reduced-motion:no-preference){.final{background-attachment:fixed}}}
     @media(max-width:980px){.nav,.header-in>.phone{display:none}.quick-grid{grid-template-columns:repeat(3,1fr)}.intro-grid,.service-head,.booking-grid,.location-grid{grid-template-columns:1fr}.experience{grid-template-columns:1fr}.exp-media{height:540px}.chan .exp-media{order:0}.service-cards{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}}
@@ -45,17 +47,21 @@
   <main id="top">
     <section class="hero"><div class="hero-media"><video id="heroVideo" autoplay muted loop playsinline preload="auto" poster="images/chan.jpg"><source src="hero-bg.mp4" type="video/mp4"></video></div><div class="wrap"><div class="hero-content"><span class="eyebrow">Міні-готель · Відпочинок · Кам’янець-Подільський</span><h1>Констанція<span>Басейн. Чан. Сауна. І можна залишитися на ніч.</span></h1><p>Відпочинок, проживання, альтанки та простір для невеликих святкувань у Кам’янці-Подільському.</p><div class="hero-actions"><a class="btn copper" href="#booking">Планувати відпочинок</a><a class="btn" href="tel:+380972318249">Зателефонувати</a></div><div class="hero-address"><span>вул. Середня, 32 · Кам’янець-Подільський</span><a href="https://maps.app.goo.gl/ZKGL9DvJMjLxfq236" target="_blank" rel="noopener">Показати на карті →</a></div></div></div></section>
     <section class="quick" aria-label="Напрями відпочинку"><div class="wrap quick-grid reveal-group"><a class="reveal-item" href="#pool"><b>БАСЕЙН</b><strong>Басейн</strong></a><a class="reveal-item" href="#chan"><b>ЧАН</b><strong>Чан</strong></a><a class="reveal-item" href="#sauna"><b>САУНА</b><strong>Сауна / баня</strong></a><a class="reveal-item" href="#stay"><b>ПРОЖИВАННЯ</b><strong>Проживання</strong></a><a class="reveal-item" href="#together"><b>РАЗОМ</b><strong>Альтанки</strong></a><a class="reveal-item" href="#together"><b>СВЯТКУВАННЯ</b><strong>Святкування</strong></a></div></section>
-    <section class="section"><div class="wrap"><div class="intro-grid"><div><span class="eyebrow">Relax · Stay · Celebrate</span><h2>Тут не обов’язково просто ночувати</h2></div><p class="lead">«Констанція» поєднує проживання з leisure-форматом. Можна обрати басейн, чан, сауну, альтанку, масаж або уточнити формат із ночівлею.</p></div><div class="selector reveal-group"><article class="select-card reveal-item"><span>01 · ВОДА</span><h3>Басейн</h3><a href="#pool">Освіжитися →</a></article><article class="select-card reveal-item"><span>02 · ТЕПЛО</span><h3>Чан</h3><a href="#chan">Зігрітися →</a></article><article class="select-card reveal-item"><span>03 · ВІДПОЧИНОК</span><h3>Сауна / баня</h3><a href="#sauna">Розслабитися →</a></article><article class="select-card reveal-item"><span>04 · НІЧ</span><h3>Номер</h3><a href="#stay">Залишитися →</a></article><article class="select-card reveal-item"><span>05 · РАЗОМ</span><h3>Альтанка</h3><a href="#together">Зібрати друзів →</a></article><article class="select-card reveal-item"><span>06 · МАСАЖ</span><h3>Масаж</h3><a href="#massage">Уточнити запис →</a></article></div></div></section>
-    <section class="experience pool" id="pool"><div class="exp-media reveal"><img src="images/pool.jpg" alt="Камерний басейн, ілюстративне зображення" loading="lazy"></div><div class="exp-copy"><div><span class="eyebrow">Вода</span><h2>Басейн</h2><p>Наявність басейну підтверджена у вихідному описі. Уточніть актуальний формат відвідування, сезонність, години роботи та вартість.</p><div class="tags"><span>Вода</span><span>Відпочинок</span><span>Окрема послуга</span></div><a class="btn primary" href="#booking">Запитати про басейн</a><p class="fine">Розміри, глибина, підігрів, дитячий доступ і правила для зовнішніх гостей наразі не підтверджені.</p></div></div></section>
-    <section class="experience chan" id="chan"><div class="exp-copy reveal"><div><span class="eyebrow">Тепло</span><h2>Чан</h2><p>Один із головних leisure-напрямів «Констанції». Запитайте про доступну дату, тривалість сеансу, місткість і підготовку.</p><div class="tags"><span>Тепло</span><span>Пара</span><span>Вечірній формат</span></div><a class="btn copper" href="#booking">Забронювати чан</a><p class="fine">Зображення передає атмосферу й не підтверджує реальне розташування чану. Indoor/outdoor, температура, рушники та душові потрібно уточнити.</p></div></div><div class="exp-media reveal"><img src="images/chan.jpg" alt="Чан із теплою водою, ілюстративне зображення" loading="lazy"></div></section>
-    <section class="section service-band" id="sauna"><div class="wrap"><div class="service-head"><div><span class="eyebrow" style="color:#f0c097">Відпочинок · Разом</span><h2>Ще кілька способів відпочити</h2></div><p class="lead">Кожен напрям можна замовити окремо. Комбінації та пакети уточнюйте під час дзвінка.</p></div><div class="service-cards reveal-group"><article class="service-card reveal-item"><span class="eyebrow" style="color:#efc49c">Сауна</span><h3>Сауна / баня</h3><p>Формат: сауна чи баня, уточнюйте під час запису.</p><a href="#booking">Запитати формат →</a></article><article class="service-card reveal-item" id="massage"><span class="eyebrow" style="color:#efc49c">Масаж</span><h3>Масаж</h3><p>Пропонується антицелюлітний та розслаблювальний масаж. Це не медична процедура, без терапевтичних обіцянок.</p><a href="#booking">Уточнити запис →</a></article><article class="service-card reveal-item" id="together"><span class="eyebrow" style="color:#efc49c">Разом</span><h3>Альтанки</h3><p>Оренда альтанок підтверджена. Місткість, їжа, BBQ, музика й тривалість уточнюйте.</p><a href="#booking">Запитати альтанку →</a></article><article class="service-card reveal-item"><span class="eyebrow" style="color:#efc49c">Свято</span><h3>Святкування</h3><p>Організація святкувань є у вихідному описі. Масштаб, харчування й пакети уточнюйте.</p><a href="#booking">Запланувати →</a></article></div></div></section>
-    <section class="experience stay" id="stay"><div class="exp-media reveal"><img src="images/stay.jpg" alt="Теплий номер для ночівлі, ілюстративне зображення" loading="lazy"></div><div class="exp-copy reveal"><div><span class="eyebrow">Проживання</span><h2>Не поспішайте додому</h2><p>Після басейну, чану, сауни або вечора з друзями можна уточнити проживання у міні-готелі.</p><div class="tags"><span>Ночівля</span><span>Продовження відпочинку</span></div><a class="btn primary" href="#booking">Запитати проживання</a><p class="fine">Кількість і категорії номерів, місткість, ціни, санвузли, Wi‑Fi, кухня, сніданок та час заїзду/виїзду не підтверджені.</p></div></div></section>
+    <section class="section"><div class="wrap"><div class="intro-grid"><div><span class="eyebrow">Relax · Stay · Celebrate</span><h2>Тут не обов’язково просто ночувати</h2></div><p class="lead">«Констанція» поєднує проживання з leisure-форматом. Можна обрати басейн, чан, сауну, альтанку, масаж або уточнити формат із ночівлею.</p></div><div class="selector reveal-group"><article class="select-card reveal-item"><span>01 · ВОДА</span><h3>Басейн</h3><a href="#pool">Освіжитися →</a></article><article class="select-card reveal-item"><span>02 · ТЕПЛО</span><h3>Чан</h3><a href="#chan">Зігрітися →</a></article><article class="select-card reveal-item"><span>03 · ВІДПОЧИНОК</span><h3>Сауна / баня</h3><a href="#sauna">Розслабитися →</a></article><article class="select-card reveal-item"><span>04 · НІЧ</span><h3>Номер</h3><a href="#stay">Залишитися →</a></article><article class="select-card reveal-item"><span>05 · РАЗОМ</span><h3>Альтанка</h3><a href="#together">Зібрати друзів →</a></article><article class="select-card reveal-item"><span>06 · МАСАЖ</span><h3>Масаж</h3><a href="#spa-request">Уточнити запис →</a></article></div></div></section>
+    <section class="experience pool" id="pool"><div class="exp-media reveal"><img src="images/pool.jpg" alt="Камерний басейн, ілюстративне зображення" loading="lazy"></div><div class="exp-copy"><div><span class="eyebrow">Вода</span><h2>Басейн</h2><p>Наявність басейну підтверджена у вихідному описі. Уточніть актуальний формат відвідування, сезонність, години роботи та вартість.</p><div class="tags"><span>Вода</span><span>Відпочинок</span><span>Окрема послуга</span></div><a class="btn primary" href="#spa-request">Запитати про басейн</a><p class="fine">Розміри, глибина, підігрів, дитячий доступ і правила для зовнішніх гостей наразі не підтверджені.</p></div></div></section>
+    <section class="section request" id="spa-request"><div class="wrap request-grid"><div class="reveal"><span class="eyebrow">Басейн · Масаж</span><h2>Запишіться на басейн або масаж</h2><p class="lead">Оберіть день і зручний час. Ми передзвонимо, щоб підтвердити запис, формат і вартість.</p><a class="request-phone" href="tel:+380972318249">+38 097 231 82 49</a></div><form class="request-form reveal" data-hotelos data-form-name="Запит на SPA" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Людей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата<input name="date" type="date"></label><label class="field">Час<input name="time" type="time"></label><label class="field full">Що саме<select name="service"><option value="">Ще не вирішили</option><option>Басейн</option><option>Антицелюлітний масаж</option><option>Розслаблювальний масаж</option></select></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
+    <section class="experience chan" id="chan"><div class="exp-copy reveal"><div><span class="eyebrow">Тепло</span><h2>Чан</h2><p>Один із головних leisure-напрямів «Констанції». Запитайте про доступну дату, тривалість сеансу, місткість і підготовку.</p><div class="tags"><span>Тепло</span><span>Пара</span><span>Вечірній формат</span></div><a class="btn copper" href="#sauna-request">Забронювати чан</a><p class="fine">Зображення передає атмосферу й не підтверджує реальне розташування чану. Indoor/outdoor, температура, рушники та душові потрібно уточнити.</p></div></div><div class="exp-media reveal"><img src="images/chan.jpg" alt="Чан із теплою водою, ілюстративне зображення" loading="lazy"></div></section>
+    <section class="section request alt" id="sauna-request"><div class="wrap request-grid"><div class="reveal"><span class="eyebrow">Чан · Сауна</span><h2>Забронюйте чан або сауну</h2><p class="lead">Вкажіть дату, час і кількість людей. Ми зателефонуємо, щоб підтвердити сеанс і розповісти про підготовку.</p><a class="request-phone" href="tel:+380972318249">+38 097 231 82 49</a></div><form class="request-form reveal" data-hotelos data-form-name="Бронювання сауни" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Людей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата<input name="date" type="date"></label><label class="field">Час<input name="time" type="time"></label><label class="field full">Що саме<select name="service"><option value="">Ще не вирішили</option><option>Чан</option><option>Сауна / баня</option></select></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn copper" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
+    <section class="section service-band" id="sauna"><div class="wrap"><div class="service-head"><div><span class="eyebrow" style="color:#f0c097">Відпочинок · Разом</span><h2>Ще кілька способів відпочити</h2></div><p class="lead">Кожен напрям можна замовити окремо. Комбінації та пакети уточнюйте під час дзвінка.</p></div><div class="service-cards reveal-group"><article class="service-card reveal-item"><span class="eyebrow" style="color:#efc49c">Сауна</span><h3>Сауна / баня</h3><p>Формат: сауна чи баня, уточнюйте під час запису.</p><a href="#sauna-request">Забронювати сауну →</a></article><article class="service-card reveal-item" id="massage"><span class="eyebrow" style="color:#efc49c">Масаж</span><h3>Масаж</h3><p>Пропонується антицелюлітний та розслаблювальний масаж. Це не медична процедура, без терапевтичних обіцянок.</p><a href="#spa-request">Записатися на масаж →</a></article><article class="service-card reveal-item" id="together"><span class="eyebrow" style="color:#efc49c">Разом</span><h3>Альтанки</h3><p>Оренда альтанок підтверджена. Місткість, їжа, BBQ, музика й тривалість уточнюйте.</p><a href="#event-request">Запитати альтанку →</a></article><article class="service-card reveal-item"><span class="eyebrow" style="color:#efc49c">Свято</span><h3>Святкування</h3><p>Організація святкувань є у вихідному описі. Масштаб, харчування й пакети уточнюйте.</p><a href="#event-request">Запланувати →</a></article></div></div></section>
+    <section class="section request" id="event-request"><div class="wrap request-grid"><div class="reveal"><span class="eyebrow">Разом</span><h2>Заплануйте свято або вечір в альтанці</h2><p class="lead">Вкажіть дату й кількість гостей. Ми передзвонимо, щоб узгодити формат, харчування та деталі.</p><a class="request-phone" href="tel:+380972318249">+38 097 231 82 49</a></div><form class="request-form reveal" data-hotelos data-form-name="Запит на подію" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field full">Дата<input name="date" type="date"></label><label class="field full">Формат<select name="service"><option value="">Ще не вирішили</option><option>Святкування</option><option>Оренда альтанки</option></select></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn copper" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
+    <section class="experience stay" id="stay"><div class="exp-media reveal"><img src="images/stay.jpg" alt="Теплий номер для ночівлі, ілюстративне зображення" loading="lazy"></div><div class="exp-copy reveal"><div><span class="eyebrow">Проживання</span><h2>Не поспішайте додому</h2><p>Після басейну, чану, сауни або вечора з друзями можна уточнити проживання у міні-готелі.</p><div class="tags"><span>Ночівля</span><span>Продовження відпочинку</span></div><a class="btn primary" href="#stay-request">Запитати проживання</a><p class="fine">Кількість і категорії номерів, місткість, ціни, санвузли, Wi‑Fi, кухня, сніданок та час заїзду/виїзду не підтверджені.</p></div></div></section>
+    <section class="section request alt" id="stay-request"><div class="wrap request-grid"><div class="reveal"><span class="eyebrow">Проживання</span><h2>Залишіться на ніч</h2><p class="lead">Вкажіть телефон і, за бажанням, дати. Ми передзвонимо, щоб підтвердити доступність номера та вартість.</p><a class="request-phone" href="tel:+380972318249">+38 097 231 82 49</a></div><form class="request-form reveal" data-hotelos data-form-name="Запит на проживання" novalidate><label class="field full">Телефон<small>Обов’язково, щоб ми могли передзвонити</small><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required><span data-error-for="phone"></span></label><label class="field">Ім’я<input name="name" type="text" autocomplete="name" maxlength="200"></label><label class="field">Гостей<input name="guests" type="number" min="1" max="50" inputmode="numeric"></label><label class="field">Дата заїзду<input name="checkIn" type="date"></label><label class="field">Дата виїзду<input name="checkOut" type="date"><span data-error-for="checkOut"></span></label><label class="field full">Побажання<textarea name="message" maxlength="5000"></textarea></label><label class="trap" aria-hidden="true">Не заповнюйте<input name="website" type="text" tabindex="-1" autocomplete="off"></label><div class="request-foot"><button class="btn primary" type="submit">Надіслати запит</button><p class="request-note">Номер використаємо лише для відповіді на цей запит.</p></div><p data-status role="status" aria-live="polite"></p></form></div></section>
     <section class="section story"><div class="wrap"><span class="eyebrow">Ваш день може виглядати так</span><h2>Вечір, який не потрібно закінчувати рано</h2><div class="timeline reveal-group"><div class="time reveal-item"><b>14:00</b><span>Приїхали</span></div><div class="time reveal-item"><b>15:00</b><span>Басейн</span></div><div class="time reveal-item"><b>18:00</b><span>Альтанка</span></div><div class="time reveal-item"><b>20:00</b><span>Чан або сауна</span></div><div class="time reveal-item"><b>Пізніше</b><span>Номер</span></div></div><p class="story-note">Час наведено лише як ілюстративний сценарій, а не як графік роботи чи check-in.</p></div></section>
     <section class="section booking" id="booking"><div class="wrap booking-grid"><div><span class="eyebrow">Планування</span><h2>Зв'яжіться з нами</h2><p class="lead">Зателефонуйте, щоб уточнити доступність, формат і вартість басейну, чану, сауни, альтанки, святкування, масажу чи проживання.</p></div><div class="form-card" style="text-align:center"><span class="eyebrow">Констанція</span><a class="big" style="display:block;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:850;color:var(--teal);margin:20px 0" href="tel:+380972318249">+38 097 231 82 49</a><p>вул. Середня, 32, Кам’янець-Подільський</p><a class="btn primary" href="https://maps.app.goo.gl/ZKGL9DvJMjLxfq236" target="_blank" rel="noopener">Відкрити у Google Maps</a></div></div></section>
     <section class="section" id="contacts"><div class="wrap location-grid"><div class="map-card"><iframe src="https://www.google.com/maps?q=%D0%B2%D1%83%D0%BB.%20%D0%A1%D0%B5%D1%80%D0%B5%D0%B4%D0%BD%D1%8F%2C%2032%2C%20%D0%9A%D0%B0%D0%BC%27%D1%8F%D0%BD%D0%B5%D1%86%D1%8C-%D0%9F%D0%BE%D0%B4%D1%96%D0%BB%D1%8C%D1%81%D1%8C%D0%BA%D0%B8%D0%B9&output=embed" title="Констанція на карті" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe></div><div class="contact-card"><span class="eyebrow">Контакти</span><h2>Констанція</h2><a class="big" href="tel:+380972318249">+38 097 231 82 49</a><dl><dt>Адреса</dt><dd>вул. Середня, 32</dd><dt>Графік і ціни</dt><dd>Уточніть для потрібної послуги</dd><dt>Email / сайт / Instagram</dt><dd>Не підтверджено</dd></dl></div></div></section>
     <section class="final"><div class="reveal"><span class="eyebrow" style="color:#efb17a">Басейн · Чан · Сауна · Проживання</span><h2>Ваш вечір може тривати трохи довше</h2><p>Басейн, чан, сауна, альтанки та проживання, у «Констанції».</p><div class="actions"><a class="btn copper" href="#booking">Запланувати відпочинок</a><a class="btn" href="tel:+380972318249">+38 097 231 82 49</a></div><small>ПРОЖИВАННЯ · ВІДПОЧИНОК · СВЯТА</small></div></section>
   </main>
-  <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>КОНСТАНЦІЯ</strong><small>Проживання · Відпочинок · Свята</small></div><div class="footer-col"><b>Relax</b><a href="#pool">Басейн</a><a href="#chan">Чан</a><a href="#sauna">Сауна / баня</a><a href="#massage">Масаж</a></div><div class="footer-col"><b>Stay</b><a href="#stay">Проживання</a><a href="#booking">Запит</a></div><div class="footer-col"><b>Together</b><a href="#together">Альтанки</a><a href="#together">Святкування</a><a href="#contacts">Карта й контакти</a></div></div><div class="footer-bottom"><span>вул. Середня, 32 · Кам’янець-Подільський</span><span>Ілюстративний сайт · Умови уточнюйте телефоном</span></div></div></footer>
+  <footer><div class="wrap"><div class="footer-grid"><div class="footer-brand"><strong>КОНСТАНЦІЯ</strong><small>Проживання · Відпочинок · Свята</small></div><div class="footer-col"><b>Relax</b><a href="#pool">Басейн</a><a href="#chan">Чан</a><a href="#sauna">Сауна / баня</a><a href="#massage">Масаж</a></div><div class="footer-col"><b>Stay</b><a href="#stay">Проживання</a><a href="#stay-request">Запит на проживання</a></div><div class="footer-col"><b>Together</b><a href="#together">Альтанки</a><a href="#together">Святкування</a><a href="#contacts">Карта й контакти</a></div></div><div class="footer-bottom"><span>вул. Середня, 32 · Кам’янець-Подільський</span><span>Ілюстративний сайт · Умови уточнюйте телефоном</span></div></div></footer>
   <div class="mobile-sticky"><a href="tel:+380972318249">Зателефонувати</a><a href="#booking">Забронювати</a></div>
   <script>
     const headerEl=document.querySelector('header');
@@ -72,6 +78,153 @@
         addEventListener('scroll',()=>{const r=hero.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight)heroMedia.style.transform=`translateY(${scrollY*.28}px)`},{passive:true});
       }
     }
+  </script>
+  <script type="module">
+// HotelOS site forms. Paste this whole block into the site's index.html as an inline module
+// script right before the closing body tag, and set the three constants below. Never put a
+// literal closing script tag inside this file: it would end the inline script early.
+// Contract (hotelos.webart.work/CRM.md → Submission data contract, firestore.rules):
+// - every form is <form data-hotelos data-form-name="…" novalidate> inside a <section id="{formId}">;
+//   the section id IS the formId (stable slug, e.g. stay-request, sauna-request) and the CRM
+//   links to SITE + '#' + formId, so the link scrolls to the start of that section;
+// - fields are matched by name: phone (required), name, email, message, checkIn, checkOut, guests,
+//   roomType, date, time, service; a [data-genders] box renders one select per guest (hostels);
+// - errors go to [data-error-for="<name>"], the result to [data-status]; `website` is a honeypot.
+const HOTEL_ID = 'kp-konstantsiia'; // Firestore hotels/{id}: 'kp-' + site folder name
+const SITE = 'https://konstantsiia.webart.work/'; // from the site's CNAME
+const PHONE = '+38 097 231 82 49'; // shown when sending fails
+
+const FIREBASE = {
+	apiKey: 'AIzaSyBeSB5EuC4BBSpmCGA3Pjk7dD_JV2SdcSQ',
+	authDomain: 'hotel-upwork.firebaseapp.com',
+	projectId: 'hotel-upwork',
+	appId: '1:40129364672:web:c9659550ebf0f1d8a36325',
+};
+const SDK = 'https://www.gstatic.com/firebasejs/12.19.0/';
+const TEXT_FIELDS = ['name', 'email', 'message', 'checkIn', 'checkOut', 'date', 'time', 'roomType', 'service'];
+const today = new Date(Date.now() - new Date().getTimezoneOffset() * 6e4).toISOString().slice(0, 10);
+
+let db;
+async function firestore() {
+	if (db) return db;
+	// Loaded on first submit only, so the page itself stays light.
+	const [{ initializeApp }, lite] = await Promise.all([import(SDK + 'firebase-app.js'), import(SDK + 'firebase-firestore-lite.js')]);
+	db = { lite, store: lite.getFirestore(initializeApp(FIREBASE)) };
+	return db;
+}
+
+function setup(form) {
+	const formId = form.closest('section[id]')?.id;
+	if (!formId) return console.error('HotelOS form needs a parent <section id="formId">', form);
+	const field = (name) => form.elements.namedItem(name);
+	const statusEl = form.querySelector('[data-status]');
+	const submit = form.querySelector('[type=submit]');
+	const submitLabel = submit.textContent;
+	const gendersBox = form.querySelector('[data-genders]');
+
+	for (const name of ['checkIn', 'checkOut', 'date']) if (field(name)) field(name).min = today;
+	if (field('checkIn') && field('checkOut')) {
+		field('checkIn').addEventListener('change', () => {
+			const checkIn = field('checkIn').value;
+			field('checkOut').min = checkIn || today;
+			if (field('checkOut').value && field('checkOut').value <= checkIn) field('checkOut').value = '';
+		});
+	}
+
+	// Hostels: one gender select per guest, kept in sync with the guests count.
+	function renderGenders() {
+		if (!gendersBox) return;
+		const count = Math.min(Math.max(parseInt(field('guests')?.value, 10) || 1, 1), 20);
+		const current = [...gendersBox.querySelectorAll('select')].map((select) => select.value);
+		gendersBox.replaceChildren(
+			...Array.from({ length: count }, (_, i) => {
+				const label = document.createElement('label');
+				label.textContent = `Гість ${i + 1}`;
+				const select = document.createElement('select');
+				select.name = 'gender';
+				select.required = true;
+				select.innerHTML = '<option value="">Стать</option><option value="female">Жінка</option><option value="male">Чоловік</option>';
+				select.value = current[i] ?? '';
+				label.append(select);
+				return label;
+			}),
+		);
+	}
+	if (gendersBox) {
+		field('guests')?.addEventListener('input', renderGenders);
+		renderGenders();
+	}
+
+	function setError(name, text) {
+		const input = field(name);
+		if (input instanceof Element) input.setAttribute('aria-invalid', text ? 'true' : 'false');
+		const slot = form.querySelector(`[data-error-for="${name}"]`);
+		if (slot) slot.textContent = text;
+	}
+
+	function showStatus(state, html) {
+		statusEl.dataset.state = state;
+		statusEl.innerHTML = html;
+	}
+
+	form.addEventListener('submit', async (event) => {
+		event.preventDefault();
+		showStatus('', '');
+		const phone = field('phone').value.trim();
+		const digits = phone.replace(/\D/g, '');
+		setError('phone', digits.length < 9 || digits.length > 15 ? 'Вкажіть номер телефону, щоб ми могли передзвонити.' : '');
+		if (field('checkIn') && field('checkOut')) {
+			const { value: checkIn } = field('checkIn');
+			const { value: checkOut } = field('checkOut');
+			setError('checkOut', checkIn && checkOut && checkOut <= checkIn ? 'Дата виїзду має бути пізніше за дату заїзду.' : '');
+		}
+		const genderSelects = gendersBox ? [...gendersBox.querySelectorAll('select')] : [];
+		if (gendersBox) {
+			const missing = genderSelects.some((select) => !select.value);
+			for (const select of genderSelects) select.setAttribute('aria-invalid', missing && !select.value ? 'true' : 'false');
+			const slot = form.querySelector('[data-error-for="genders"]');
+			if (slot) slot.textContent = missing ? 'Вкажіть стать кожного гостя, щоб ми підібрали місця.' : '';
+		}
+		const invalid = form.querySelector('[aria-invalid=true]');
+		if (invalid) return invalid.focus();
+
+		const thanks = `Дякуємо! Ми зателефонуємо на ${phone.replace(/</g, '')} найближчим часом.`;
+		// Bots fill the hidden field: pretend success, send nothing.
+		if (field('website')?.value) {
+			form.reset();
+			renderGenders();
+			return showStatus('ok', thanks);
+		}
+
+		const lead = { phone, formId, formName: form.dataset.formName, site: SITE, hotelId: HOTEL_ID };
+		for (const name of TEXT_FIELDS) {
+			const value = field(name)?.value?.trim();
+			if (value) lead[name] = value;
+		}
+		const guests = parseInt(field('guests')?.value, 10);
+		if (guests >= 1 && guests <= 50) lead.guests = guests;
+		if (genderSelects.length) lead.genders = genderSelects.map((select) => select.value);
+
+		submit.disabled = true;
+		submit.textContent = 'Надсилаємо…';
+		try {
+			const { lite, store } = await firestore();
+			await lite.addDoc(lite.collection(store, 'submissions'), { ...lead, status: 'new', history: [], createdAt: lite.serverTimestamp() });
+			form.reset();
+			if (field('checkOut')) field('checkOut').min = today;
+			renderGenders();
+			showStatus('ok', thanks);
+		} catch (error) {
+			console.error(error);
+			showStatus('error', `Не вдалося надіслати запит. Зателефонуйте нам: <a href="tel:${PHONE.replace(/[^\d+]/g, '')}">${PHONE}</a>.`);
+		} finally {
+			submit.disabled = false;
+			submit.textContent = submitLabel;
+		}
+	});
+}
+
+document.querySelectorAll('form[data-hotelos]').forEach(setup);
   </script>
 </body>
 </html>

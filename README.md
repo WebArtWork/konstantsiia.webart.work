@@ -21,3 +21,6 @@ Mini-hotel "Konstantsiia" is a leisure-focused property at vul. Serednia, 32 in 
 
 ## Notes
 The page explicitly flags several details as unconfirmed: pool dimensions/depth/heating/child access, chan location and indoor/outdoor setup, room counts/categories/pricing/amenities, and schedule/pricing for each service, all to be confirmed by phone.
+
+## Forms
+Live forms posting to HotelOS (`kp-konstantsiia`): `spa-request` (pool / massage, after the pool section), `sauna-request` (chan / sauna, after the chan section), `event-request` (celebrations / gazebos, after the services band) and `stay-request` (after the stay section).
